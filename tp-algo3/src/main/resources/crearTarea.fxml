@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControladorNuevaTarea">
+  <tabs>
+    <Tab text="Crear Evento">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="800.0">
+          <children>
+            <GridPane layoutX="40.0" layoutY="16.0" prefHeight="366.0" prefWidth="702.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="167.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="448.0" minWidth="10.0" prefWidth="433.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="179.0" minHeight="3.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="179.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="179.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="145.0" minHeight="0.0" prefHeight="86.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+              <children>
+                <StackPane prefHeight="150.0" prefWidth="200.0">
+                  <children>
+                    <Label text="Nombre:">
+                      <font>
+                        <Font size="18.0" />
+                      </font>
+                    </Label>
+                  </children>
+                </StackPane>
+                <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                  <children>
+                    <Label text="Descripcion:">
+                      <font>
+                        <Font size="18.0" />
+                      </font>
+                    </Label>
+                  </children>
+                </StackPane>
+                <StackPane prefHeight="96.0" prefWidth="254.0" GridPane.rowIndex="3">
+                  <children>
+                    <Label text="Vencimiento:">
+                      <font>
+                        <Font size="18.0" />
+                      </font>
+                    </Label>
+                  </children>
+                </StackPane>
+                <TextField fx:id="Nombre" GridPane.columnIndex="1" />
+                <TextArea fx:id="Descripcion" prefHeight="85.0" prefWidth="433.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <GridPane prefHeight="73.0" prefWidth="448.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="131.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="302.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                      <children>
+                        <Label text="Dia:" />
+                      </children>
+                    </StackPane>
+                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                      <children>
+                        <Label text="Hora:" />
+                      </children>
+                    </StackPane>
+                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                      <children>
+                        <Label text="Minuto:" />
+                      </children>
+                    </StackPane>
+                    <DatePicker fx:id="DiaVencimiento" prefHeight="25.0" prefWidth="150.0" GridPane.columnIndex="1" />
+                    <Spinner fx:id="HoraVencimiento" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <Spinner fx:id="MinutoVencimiento" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  </children>
+                </GridPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="5">
+                           <children>
+                              <Label text="Completada:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <children>
+                              <ToggleButton fx:id="Completada" mnemonicParsing="false" text="Completada" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="4">
+                           <children>
+                              <Label text="Dia Completo:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <ToggleButton fx:id="Completo" mnemonicParsing="false" text="Completo" />
+                           </children>
+                        </StackPane>
+              </children>
+            </GridPane>
+                  <Button fx:id="CrearTarea" layoutX="353.0" layoutY="431.0" mnemonicParsing="false" onAction="#handleCrearTarea" text="Crear Tarea" />
+                  <Button fx:id="Salir" layoutX="663.0" layoutY="431.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
+          </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Crear Alarmas">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <GridPane layoutY="41.0" prefHeight="182.0" prefWidth="600.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="182.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="436.0" minWidth="10.0" prefWidth="418.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+              <children>
+                <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                  <children>
+                    <Label text="Efecto:">
+                      <font>
+                        <Font size="18.0" />
+                      </font>
+                    </Label>
+                  </children>
+                </StackPane>
+                <StackPane prefHeight="150.0" prefWidth="200.0">
+                  <children>
+                    <Label text="Tiempo Posterior:">
+                      <font>
+                        <Font size="18.0" />
+                      </font>
+                    </Label>
+                  </children>
+                </StackPane>
+                <Spinner fx:id="TiempoPosterior" GridPane.columnIndex="1" />
+                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <children>
+                    <RadioButton fx:id="Notificacion" mnemonicParsing="false" prefHeight="91.0" prefWidth="152.0" text="Notificacion">
+                      <toggleGroup>
+                        <ToggleGroup fx:id="Efectos" />
+                      </toggleGroup>
+                    </RadioButton>
+                    <RadioButton fx:id="Email" mnemonicParsing="false" prefHeight="91.0" prefWidth="149.0" text="Email" toggleGroup="$Efectos" />
+                    <RadioButton fx:id="Sonido" mnemonicParsing="false" prefHeight="91.0" prefWidth="157.0" text="Sonido" toggleGroup="$Efectos" />
+                  </children>
+                </HBox>
+              </children>
+            </GridPane>
+            <Button fx:id="CrearAlarma" layoutX="253.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleCrearAlarma" prefHeight="25.0" prefWidth="95.0" text="Crear Alarma" />
+            <Label layoutX="221.0" layoutY="386.0" text="Cantidad de Alarmas del evento:" />
+            <Label fx:id="CantidadAlarmas" layoutX="397.0" layoutY="386.0" text="0" />
+          </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
